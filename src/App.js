@@ -1,25 +1,57 @@
-import './App.css';
+import './App.scss';
 import { useMemo,useCallback,useState,useEffect } from 'react';
-
+import Home from './Home';
+import Editing from './Editing';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Note from './Note';
+import { click } from '@testing-library/user-event/dist/click';
 function App() {
-  const [counter,changecounter]=useState(1);
-  const [background,changebackground]=useState('black');
-  const object=useMemo(() =>{return {color: '{background}'}}, [background])
-  // {color: '{background}'};
-  useEffect(() => {
-    console.log("triggered state")
-  }, [object])
-  
-  const slowfunction=(x)=>{console.log('entering slow');for(let i=0;i<100000000000;i++){}return x*2;}
-  let changing=2;
-  
-  const out=useMemo(()=>slowfunction(changing),[changing]);
-  console.log(out);
-  return <div>
-    <button onClick={()=>changecounter((x)=>{return x+1;})}>Add</button>
-    <div><p>{counter}</p></div>
-    <div style={{backgroundColor: object.color, width: '100px', height:'100px'}}>Background</div>
-    <button onClick={()=>{changebackground((x)=>{console.log("entered"); if(x==='black'){return 'white'}else{return 'black'}})}}>change</button>
+  const [currentpage, setcurrentpage] = useState('Home');
+  const [todolist, settodolist]= useState([]);
+  const [clicked,setclicked]=useState(-1);
+  function setcurpage(input){
+    if(currentpage==='Home'&&input==='Edit'){
+      console.log('entered edit');
+      setcurrentpage('Edit');
+      // return;
+    }
+    if(currentpage==='Edit'&&input==='Home'){
+      setcurrentpage('Home');
+      // return;
+    }
+  }
+  function settingtodo(input){
+    settodolist(input);
+    // return;
+  }
+
+  function settingclicked(input){
+    console.log(input);
+    setclicked(input);
+  }
+  let head='';
+  let cont='';
+  if(clicked==-1){
+  head='';
+  cont='';
+  }
+  else{
+    console.log("jack"+clicked);
+    console.log("jack"+todolist);
+    
+    head=todolist[clicked].heading;
+    cont=todolist[clicked].textcontent;
+  }
+  let Page=null;
+  if(currentpage==='Home')
+  {Page=<Home func={setcurpage} todolist={todolist} settingclicked={setclicked} settingto1={settingtodo}/>}
+  else{
+      Page=<Editing func={setcurpage} settingto1={settingtodo} settingclicked={settingclicked} stateofclick={clicked} title={head} content={cont}/>
+  }
+  return <div id="container">
+    {
+    Page
+    }
   </div>
 }
 

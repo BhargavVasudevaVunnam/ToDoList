@@ -1,0 +1,17 @@
+@import './App.scss';
+#AddNote{
+    pointer-events: auto;
+    background-color: var(--notes-bg-color);
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+}
+#AddNote:hover{
+   @extend .mouseonnote;
+}
+#AddNote:active{
+    border: 3px solid black;
+}
