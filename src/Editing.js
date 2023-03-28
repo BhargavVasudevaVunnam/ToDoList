@@ -13,6 +13,7 @@ function handleaddingvalues(){
         let copy=[...obj];
         copy[input]=modifying;
         console.log(copy);
+        props.settingclicked(-1);
         return copy;
     }
     if(props.stateofclick==-1)
