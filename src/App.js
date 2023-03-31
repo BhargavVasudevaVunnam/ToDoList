@@ -1,10 +1,9 @@
 import './App.scss';
-import { useMemo,useCallback,useState,useEffect } from 'react';
+import { useState } from 'react';
 import Home from './Home';
 import Editing from './Editing';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Note from './Note';
-import { click } from '@testing-library/user-event/dist/click';
+
 function App() {
   const [currentpage, setcurrentpage] = useState('Home');
   const [todolist, settodolist]= useState([]);
