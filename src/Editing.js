@@ -34,9 +34,11 @@ function handleaddingvalues(){
 }
 
 return <div id="Edit">
-<input type='text' placeholder='Enter Text' ref={textvalue} defaultValue={props.title} ></input>
-<input type='text' placeholder='Enter Content' ref={contentvalue} defaultValue={props.content}></input>
-<button onClick={()=>{handleaddingvalues(); props.func('Home')}}>save</button>
+
+
+<textarea id="firstbox" rows="5" cols="50" placeholder='Enter Text' ref={textvalue} defaultValue={props.title}></textarea>
+<textarea id="secondbox"rows="20" cols="50" placeholder='Enter Content' ref={contentvalue} defaultValue={props.content}></textarea>
+<button id="button1" onClick={()=>{handleaddingvalues(); props.func('Home')}}>save</button>
 </div>
 }
 

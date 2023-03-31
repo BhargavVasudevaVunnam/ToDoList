@@ -2,6 +2,9 @@
 .notes{
     width: 20vw;
     height: 30vh;
+    min-width: 100px;
+    min-height: 130px;
+    max-width: 200px;
     background-color: var(--notes-bg-color);
     border-radius: 25%;
     display: flex;
@@ -10,10 +13,45 @@
     justify-content: center;
     pointer-events: auto;
     text-align: center;
+    overflow: hidden;
+
+    padding: 2em;
+}
+.notes:active{
+    border: 3px solid black;
 }
 .notes:hover{
     @extend .mouseonnote;
 }
-#icon{
+h5{
+    flex-shrink: 0;
+    max-width: 70px;
+    max-height: 30px;
+    min-height: 20px;
+    min-width: 20px;
+    overflow: hidden;
+    flex: 1;
     align-self: center;
+}
+p{ 
+    flex: 3;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 50px;
+    min-width: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    align-self: center;
+}
+#icon{
+    flex: 1;
+    min-height: 16px;
+    min-width: 16px;
+    align-self: center;
+   flex-shrink: 0;
+   overflow: hidden;
+}
+#icon:hover{
+    @extend .mouseonnote;
 }

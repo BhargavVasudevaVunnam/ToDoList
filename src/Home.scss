@@ -1,3 +1,4 @@
+@import './App.scss';
 #Home{
     flex: 1;
     width: 100vw;
@@ -12,10 +13,20 @@
 #notes{
     flex: 1;
     display: flex;
-    gap: 3em;
+    padding: 1em;
+    gap: 1em;
     flex-wrap: wrap;
+    justify-content:space-evenly;
     overflow: auto;
 }
 ::-webkit-scrollbar {
     display:none;
+}
+h1{
+    display: inline-block;
+    font-family:sans-serif;
+    
+}
+h1:hover{
+    @extend .mouseonnote;
 }

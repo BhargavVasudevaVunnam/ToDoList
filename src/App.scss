@@ -4,6 +4,7 @@
     width: 100vw;
     overflow: hidden;
     padding: 1em;
+    background-color:  #f6ddc7;
 }
 
 :root{
@@ -12,5 +13,5 @@
 
 .mouseonnote{
     transform: scale(1.1);
-    transition: transform 100ms;
+    transition: transform 500ms;
 }

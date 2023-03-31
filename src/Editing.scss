@@ -1,3 +1,30 @@
+@import './App.scss';
 #Edit{
     flex: 1;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+#button1{
+    align-self: center;
+    max-width: 50px;
+    border-radius: 15%;
+}
+#button1:hover{
+    @extend .mouseonnote;
+
+}
+#button:active{
+    border: 5px solid black;
+}
+#firstbox{
+    
+    align-self: center;
+}
+#secondbox{
+
+    align-self: center;
 }

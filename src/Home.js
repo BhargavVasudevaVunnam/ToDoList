@@ -4,7 +4,7 @@ import Note from './Note';
 
 function Home(props){
     return <div id="Home">
-                <h1>My Notes</h1>
+                <h1>NOTES</h1>
                 <div id="notes">
                 <AddNote func={props.func} settingclicked={props.settingclicked}/>
                 {
