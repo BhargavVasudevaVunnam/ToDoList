@@ -1,1 +1,1 @@
-Live Website URL: https://bhargavvasudevavunnam.github.io/ToDoList/
+Live website hosted via GH-pages URL: https://bhargavvasudevavunnam.github.io/ToDoList/
