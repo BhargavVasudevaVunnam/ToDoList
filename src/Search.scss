@@ -1,6 +1,13 @@
 #searchbar{
     background-color: white;
     padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 1px whitesmoke;
+}
+
+#searchbar:not(:hover){
+transform: rotateX(360deg);
+transition: transform ease-in-out 0.5s 0.5s;
 }
 input{
     border: none;

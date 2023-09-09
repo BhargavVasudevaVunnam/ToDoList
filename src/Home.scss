@@ -13,19 +13,21 @@
 #notes{
     flex: 1;
     display: flex;
-    padding: 1em;
-    gap: 1em;
+    padding: 2em;
+    gap: 3em;
     flex-wrap: wrap;
     justify-content:space-evenly;
     overflow: auto;
+
 }
 ::-webkit-scrollbar {
     display:none;
 }
 h1{
     display: inline-block;
-    font-family:sans-serif;
-    
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 h1:hover{
     @extend .mouseonnote;

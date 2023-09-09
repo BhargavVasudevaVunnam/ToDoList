@@ -1,12 +1,13 @@
 @import './App.scss';
 .notes{
-    width: 20vw;
-    height: 30vh;
+    width: 200px;
+    height: 212.25px;
     min-width: 100px;
     min-height: 130px;
     max-width: 200px;
     background-color: var(--notes-bg-color);
     border-radius: 25%;
+    box-shadow: 0 0 1px 3px white;
     display: flex;
     flex-direction: column;
     align-content: center;

@@ -2,14 +2,15 @@
 #AddNote{
     pointer-events: auto;
     background-color: var(--notes-bg-color);
-    width: 20vw;
-    height: 30vh;
     min-width: 100px;
     min-height: 130px;
     max-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 1px 3px white;
+    width: 200px;
+    height: 212.25px;
     border-radius: 25%;
 }
 #AddNote:hover{
